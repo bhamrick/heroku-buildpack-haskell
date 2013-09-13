@@ -27,7 +27,7 @@ fi
 mv $CACHE_DIR/ghc $FIXED_HOME
 
 # Delete all packages and start over if requested
-if [ "$PURGE" = "PURGE" ]
+if [ "$PURGE" = "PURGE" ]; then
     rm -rf ~/.ghc
 fi
 
