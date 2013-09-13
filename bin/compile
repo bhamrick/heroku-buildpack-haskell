@@ -26,10 +26,8 @@ fi
 # Fix directory
 mv $CACHE_DIR/ghc $FIXED_HOME
 
-# TEMP HACK - Delete Cabal cache if it exists, so we get an empty environment
-if [ -e $CACHE_DIR/cabal ]; then
-    rm -rf $CACHE_DIR/cabal
-fi
+# TEMP HACK -- delete all known packages
+rm -rf ~/.ghc
 
 # Restore Cabal cache or download an empty environemt
 if [ -e $CACHE_DIR/cabal ]; then
