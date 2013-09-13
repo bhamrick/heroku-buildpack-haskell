@@ -28,7 +28,8 @@ mv $CACHE_DIR/ghc $FIXED_HOME
 
 # Delete all packages and start over if requested
 if [ "$PURGE" = "PURGE" ]; then
-    rm -rf ~/.ghc
+    echo "-----> Purging installed binaries"
+    rm -rf $FIXED_HOME/.ghc
 fi
 
 # Restore Cabal cache or download an empty environemt
